@@ -15,8 +15,16 @@
             font-family: Arial, sans-serif;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const today = new Date();
+            const targetDate = new Date(today.getFullYear(), 8, 29); // September is month 8 (0-indexed)
+            const message = today.toDateString() === targetDate.toDateString() ? "ja for satan" : "nej tjek igen i morgen ";
+            document.getElementById("message").textContent = message;
+        });
+    </script>
 </head>
 <body>
-    nej
+    <div id="message">nej</div>
 </body>
 </html>
